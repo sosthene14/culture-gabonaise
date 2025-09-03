@@ -1,0 +1,227 @@
+/* ============================
+   STYLE GLOBAL DE LA PAGE
+   ============================ */
+body {
+    margin: 0; /* Supprime la marge par défaut autour de la page */
+    font-family: 'Poppins', sans-serif; /* Police principale du site */
+    background-color: #f5f5f5; /* Couleur de fond claire */
+    text-align: center; /* Centre par défaut le texte */
+    font-size: 15px; /* Taille de texte globale */
+    color: #333; /* Couleur du texte */
+    line-height: 1.6; /* Hauteur de ligne pour lisibilité */
+}
+
+/* ----- Style de la bannière ----- */
+.banniere img {
+    width: 10%; /* Largeur relative à son conteneur */
+    height: auto; /* Hauteur proportionnelle */
+    max-height: 300px; /* Limite la hauteur maximale */
+    object-fit: cover; /* Recadre l’image sans la déformer */
+    display: block; /* Affiche comme un bloc (pour marges) */
+}
+
+/* ----- Titre personnalisé ----- */
+.titre-personnalise {
+    font-weight: bold; /* Texte en gras */
+    font-style: italic; /* Texte en italique */
+    text-decoration: underline; /* Texte souligné */
+    text-decoration-color: #009639; /* Couleur du soulignement */
+    text-underline-offset: 4px; /* Décalage du soulignement */
+    font-size: 32px; /* Taille du titre */
+    color: #064; /* Couleur du texte */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    letter-spacing: 1.5px; /* Espacement entre les lettres */
+    margin-bottom: 20px; /* Espace sous le titre */
+    font-family: 'Poppins', sans-serif; /* Police utilisée */
+}
+
+/* ============================
+   MENU DE NAVIGATION
+   ============================ */
+.menu {
+    position: relative; /* Base de référence pour sous-menus */
+    background-color: #009639; /* Fond vert gabonais */
+    display: flex; /* Arrange les liens en ligne */
+    gap: 20px; /* Espace entre les liens */
+    padding: 10px 0; /* Espacement vertical */
+    z-index: 1000; /* Priorité d’affichage élevée */
+    overflow: visible; /* Permet aux sous-menus de dépasser */
+}
+
+.menu a {
+    color: white; /* Texte blanc */
+    padding: 16px 20px; /* Espacement autour du texte */
+    text-decoration: none; /* Pas de soulignement */
+    font-size: 16px; /* Taille du texte */
+    display: block; /* Lien occupe toute la zone */
+    transition: background-color 0.3s; /* Transition douce au survol */
+}
+
+.menu a:hover {
+    background-color: #064; /* Couleur fond au survol */
+}
+
+/* Conteneur du menu déroulant */
+.dropdown {
+    position: relative; /* Positionne le parent comme référence */
+}
+
+/* Contenu caché du menu déroulant */
+.dropdown-content {
+    display: none; /* Masqué par défaut */
+    position: absolute; /* Positionné par rapport au parent */
+    top: 100%; /* Juste sous le lien parent */
+    left: 0; /* Aligné à gauche */
+    background-color: #0f7837; /* Fond du menu déroulant */
+    min-width: 180px; /* Largeur minimale */
+    flex-direction: column; /* Liens en colonne */
+    z-index: 1001; /* Priorité d’affichage supérieure */
+    border-radius: 0 0 20px 20px; /* Bords arrondis en bas */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Ombre autour */
+}
+
+/* Style des liens à l’intérieur du menu déroulant */
+.dropdown-content a {
+    color: white; /* Texte blanc */
+    padding: 10px; /* Espacement intérieur */
+    display: block; /* Lien occupe toute la largeur */
+    text-decoration: none; /* Pas de soulignement */
+}
+
+.dropdown-content a:hover {
+    background-color: #064; /* Fond vert foncé au survol */
+}
+
+/* Affiche le menu déroulant au survol */
+.dropdown:hover .dropdown-content {
+    display: flex; /* Rend visible le menu */
+    flex-direction: column; /* Arrange les liens en colonne */
+}
+
+/* ============================
+   FLEX TEXTE À GAUCHE, IMAGE À DROITE
+   ============================ */
+.texte-image {
+    display: flex;             
+    align-items: flex-start;   
+    gap: 20px;                 
+    text-align: center;          
+    margin: 20px 0;            
+    max-width: 1000px;       
+    margin-left: auto;       
+    margin-right: auto;      
+}
+
+.texte-image .texte {
+    flex: 3;                   
+    padding-left: 20px;  
+}
+
+.texte-image .image {
+    flex: 1;           
+    max-width: 400px;       /* Limite largeur de l'image */
+    height: 300px;          /* Hauteur fixe */
+    overflow: hidden;       /* Cache ce qui dépasse */
+    display: inline-block; /* permet le centrage avec text-align */
+}
+
+.texte-image .image img {
+    width: 100%;             
+    height: 300px;           
+    object-fit: cover;       
+    object-position: center; 
+    border-radius: 15px;     
+    display: block;          
+}
+
+.carte img {
+  width: 600px;   /* 🔹 Largeur de la carte */
+  height: 400px;  /* 🔹 Hauteur de la carte */
+  object-fit: cover; /* Pour garder un joli rendu */
+  border-radius: 10px; /* Coins arrondis (optionnel) */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Ombre (optionnel) */
+}
+
+/*----------------------------------------------------------------
+ GERER LA PROPOTION DES TEXTES, PARAGRAPHE ET SOUS PARAGRAPHE
+ ----------------------------------------------------------------*/
+
+/* Appliquer une largeur max et centrer tout le contenu texte */
+h1, h2, h3, p, ul, ol {
+  max-width: 800px;   /* largeur max du bloc texte */
+  margin: 0 auto 20px auto;  /* centrer horizontalement + espace en bas */
+  line-height: 1.6;   /* aération du texte */
+}
+
+/* Ajuster la taille du texte pour plus de lisibilité */
+p {
+  font-size: 20px;
+  text-align: justify;  /* alignement justifié (propre pour des textes longs) */
+}
+
+h1 {
+  font-size: 28px;
+  text-align: center; /* les titres principaux bien centrés */
+}
+
+h2, h3 {
+  font-size: 22px;
+  text-align: left; /* sous-titres alignés à gauche pour garder une logique */
+}
+
+
+/* ============================
+   CONTENU
+   ============================ */
+.contenu {
+  /* Place pour futurs styles */
+}
+
+h1 {
+    font-size: 28px; /* Taille grand titre */
+    font-weight: 700; /* Gras */
+    margin-bottom: 25px; /* Marge dessous */
+    color: #00732a; /* Vert foncé */
+}
+
+h2 {
+    font-size: 22px; /* Taille sous-titres */
+    font-weight: 600; /* Gras moyen */
+    margin-top: 40px; /* Marge au-dessus */
+    margin-bottom: 15px; /* Marge en-dessous */
+    border-bottom: 2px solid #009639; /* Ligne verte sous-titre */
+    padding-bottom: 6px; /* Espace sous texte */
+    color: #00591a; /* Vert foncé */
+}
+
+p {
+    font-size: 15px; /* Taille texte */
+    margin-bottom: 15px; /* Marge en bas */
+}
+
+a.province-link {
+    color: #006400; /* Vert */
+    text-decoration: underline; /* Souligné */
+    font-weight: bold; /* Gras */
+}
+
+a.province-link:hover {
+    color: #009639; /* Vert plus clair au survol */
+}
+
+img {
+    flex: 1;           
+    max-width: 400px;       /* Limite largeur de l'image */
+    height: 300px;          /* Hauteur fixe */
+    overflow: hidden;       /* Cache ce qui dépasse */
+    display: inline-block; /* permet le centrage avec text-align */
+    border-radius: 15px; /* Bords arrondis */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    margin: 10px;         /* espace entre les images si tu en mets plusieurs */
+}
+
+footer {
+    font-size: 13px; /* Petite taille */
+    color: #777; /* Gris */
+    margin-top: 40px; /* Marge au-dessus */
+}

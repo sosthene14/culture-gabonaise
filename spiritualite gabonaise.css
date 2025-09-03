@@ -1,0 +1,233 @@
+/* ============================
+   STYLE GLOBAL DE LA PAGE
+   ============================ */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    text-align: center;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ----- Style de la bannière ----- */
+.banniere img {
+    width: 10%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ----- Titre personnalisé ----- */
+.titre-personnalise {
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    text-decoration-color: #009639;
+    text-underline-offset: 4px;
+    font-size: 32px;
+    color: #064;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ============================
+   MENU DE NAVIGATION
+   ============================ */
+.menu {
+    background-color: #009639;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #064;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  background-color: #333;
+  padding: 10px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+}
+
+/*-------- menu deroulant ------
+---------------------------------*/
+
+/* Conteneur principal du menu */
+.menu {
+  position: relative; /* Position relative pour que les sous-menus positionnés en absolu se réfèrent à ce conteneur */
+  background-color: #009639; /* Fond vert gabonais */
+  display: flex; /* Affiche les liens du menu en ligne (horizontalement) */
+  gap: 20px; /* Espace horizontal entre chaque lien */
+  padding: 10px 0; /* Espacement vertical haut et bas dans le menu */
+  z-index: 1000; /* Priorité d’affichage pour que le menu soit au-dessus des autres éléments */
+  overflow: visible; /* Permet d’éviter que les sous-menus soient coupés par le conteneur */
+}
+
+/* Style général des liens dans le menu */
+.menu a {
+  color: white; /* Texte en blanc */
+  padding: 16px 20px; /* Espace autour du texte dans les liens */
+  text-decoration: none; /* Supprime le soulignement des liens */
+  font-size: 16px; /* Taille de police */
+  display: block; /* Le lien occupe tout l’espace disponible (utile pour le clic) */
+  transition: background-color 0.3s; /* Animation douce quand la couleur de fond change au survol */
+}
+
+/* Effet visuel quand on survole un lien du menu */
+.menu a:hover {
+  background-color: #064; /* Changement de fond en vert foncé */
+}
+
+/* Conteneur du menu déroulant */
+.dropdown {
+  position: relative; /* Position relative pour que le sous-menu en absolu se positionne par rapport à ce conteneur */
+}
+
+/* Contenu caché du menu déroulant */
+.dropdown-content {
+  display: none; /* Masqué par défaut */
+  position: absolute; /* Positionné relativement au parent .dropdown */
+  top: 100%; /* Placé juste en dessous du bouton du menu */
+  left: 0; /* Aligné à gauche du bouton parent */
+  background-color: #0f7837; /* couleur du menue deroulant */
+  min-width: 180px; /* Largeur minimum du menu déroulant */
+  flex-direction: column; /* Les liens seront empilés verticalement */
+  z-index: 1001; /* Priorité d’affichage plus haute que le menu principal */
+  border-radius: 0 0 20px 20px; /* Bords arrondis en bas du menu déroulant */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* ombre qui suit l’arrondi */}
+
+/* Style des liens à l’intérieur du menu déroulant */
+.dropdown-content a {
+  color: white; /* Texte blanc */
+  padding: 10px; /* Espace autour de chaque lien */
+  display: block; /* Chaque lien occupe toute la largeur */
+  text-decoration: none; /* Pas de soulignement */
+}
+
+/* Effet au survol d’un lien dans le menu déroulant */
+.dropdown-content a:hover {
+  background-color: #064; /* Fond vert foncé au passage de la souris */
+}
+
+/* Affichage du menu déroulant quand on survole le conteneur .dropdown */
+.dropdown:hover .dropdown-content {
+  display: flex; /* Le menu déroulant devient visible */
+  flex-direction: column; /* S’assure que les liens sont bien empilés verticalement
+  */
+
+  /*faire que le menue deroulant soit bien ajuste sous culture*/
+  .dropdown {
+    position: relative; /* Positionne le parent comme référence pour l'enfant absolu */
+}
+}
+
+.dropdown-content {
+    position: absolute; /* Positionné relativement au parent .dropdown */
+    top: 100%;          /* Juste en dessous du bouton */
+    left: 0;            /* Aligné à gauche du bouton */
+    right: auto;        /* S'assure qu'on ne force pas un décalage à droite */
+    width: max-content; /* Pour que la largeur s'ajuste au contenu */
+    min-width: 180px;   /* Largeur minimale */
+    /* autres styles */
+}
+
+  
+/* ============================
+   CONTENU
+   ============================ */
+.contenu {
+    
+}
+
+/* ============================
+   TITRES
+   ============================ */
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #00732a;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #009639;
+    padding-bottom: 6px;
+    color: #00591a;
+}
+
+/* ============================
+   PARAGRAPHES
+   ============================ */
+p {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+/* Ajuster la taille du texte pour plus de lisibilité */
+.intro {
+  font-size: 20px;
+  text-align: justify;  /* alignement justifié (propre pour des textes longs) */
+  max-width: 1200px;   /* largeur max du bloc texte */
+  margin: 0 auto;         /* centre le bloc de texte */
+  line-height: 1.6;   /* aération du texte */
+}
+/* ============================
+   LIENS INTERNES
+   ============================ */
+a.province-link {
+    color: #006400;
+    text-decoration: underline;
+    font-weight: bold;
+}
+a.province-link:hover {
+    color: #009639;
+}
+
+/* ============================
+   IMAGES
+   ============================ */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+/* ============================
+   PIED DE PAGE
+   ============================ */
+footer {
+    font-size: 13px;
+    color: #777;
+    margin-top: 40px;
+}
