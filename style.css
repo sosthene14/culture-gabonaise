@@ -2,12 +2,13 @@
    STYLE GLOBAL
    ============================ */
 body {
-    margin: 0; /* Supprime les marges automatiques du navigateur */
-    font-family: 'Poppins', sans-serif; /* Police principale du site */
-    background-color: #f5f5f5; /* Fond gris clair */
-    font-size: 16px; /* Taille par défaut du texte */
-    color: #333; /* Texte en gris foncé pour la lisibilité */
-    line-height: 1.6; /* Espace entre les lignes du texte */
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    text-align: center;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
 }
 
 /* ----- Bannière ----- */
@@ -179,19 +180,28 @@ Conteneur du menu déroulant
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Ombre */
 }
 
+.intro {
+    font-size: 18px; /* Texte un peu plus grand */
+    font-style: italic; /* Italique */
+    margin-bottom: 20px; /* Espace en dessous */
+    color: #555; /* Gris moyen */
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 18px; /* Texte lisible */
+    text-align: justify; /* Texte aligné des deux côtés */
+
+}
+
 /* ============================
    TEXTES
    ============================ */
-h1, h2, h3, p {
+h1, h2, h3 {
     max-width: 900px; /* Texte limité en largeur */
     margin: 0 auto 20px auto; /* Centré avec espace en bas */
     line-height: 1.6; /* Bonne lisibilité */
 }
 
-p {
-    font-size: 18px; /* Texte lisible */
-    text-align: justify; /* Texte aligné des deux côtés */
-}
+ 
 
 h1 {
     font-size: 28px; /* Gros titre */
