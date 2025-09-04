@@ -9,23 +9,36 @@
 </head>
 <body>
   <!-- Menu principal -->
-  <div class="menu">
-    <a href="index.html">Accueil</a>
-    <a href="presentation_gabon.html">GABON</a>
-    <div class="dropdown">
-      <a href="culture.html" class="dropbtn">CULTURE</a>
-      <div class="dropdown-content">
-        <a href="art.html">Art et artisanat</a>
-        <a href="medecine.html">Médecine traditionnelle</a>
-        <a href="gastronomie.html">Gastronomie</a>
+  <nav class="navbar">
+    <div class="nav-container">
+      <!-- Logo ou titre (optionnel) -->
+      <div class="nav-logo">
+        <a href="index.html">Culture Gabonaise</a>
+      </div>
+      <!-- Bouton hamburger pour mobile -->
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+      <!-- Menu principal -->
+      <div class="nav-menu">
+        <a href="index.html">Accueil</a>
+        <a href="presentation_gabon.html">Gabon</a>
+        <div class="dropdown">
+          <a href="culture.html" class="dropbtn">Culture</a>
+          <div class="dropdown-content">
+            <a href="art.html">Art et artisanat</a>
+            <a href="medecine.html">Médecine traditionnelle</a>
+            <a href="gastronomie.html">Gastronomie</a>
+          </div>
+        </div>
+        <a href="spiritualite gabonaise.html">Spiritualité</a>
+        <a href="Peuple Fang.html">Peuple Fang</a>
       </div>
     </div>
-    <a href="spiritualite gabonaise.html">SPIRITUALITÉ</a>
-    <a href="Peuple Fang.html">PEUPLE FANG</a>
-  </div>
+  </nav>
 
-  <!-- Section Introduction -->
-  <div class="contenu">
+  <div >
+  <div class="contenu" style="margin-top: 20px;">
     <h1>Le Gabon</h1>
     <p class="introduction">
       Le <strong>Gabon</strong> est un pays d’Afrique centrale marqué par la diversité de ses peuples et de ses traditions. 
@@ -80,6 +93,9 @@
     <img src="images/culture-gabonaise1.webp" alt="Culture gabonaise" />
   </div>
 
+  </div>
+  <!-- Section Introduction -->
+
   <footer>
     <p>© 2025 - Site sur la culture gabonaise
     </p>
@@ -87,6 +103,18 @@
       BY Chelsie Meye
     </p>
   </footer>
+<script>
+  // Gestion du menu hamburger
+  document.querySelector('.hamburger').addEventListener('click', () => {
+    document.querySelector('.nav-menu').classList.toggle('active');
+  });
 
+  // Fermer le menu mobile si on clique sur un lien
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelector('.nav-menu').classList.remove('active');
+    });
+  });
+</script>
 </body>
 </html>

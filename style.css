@@ -278,3 +278,170 @@ footer {
         font-size: 15px; /* Texte encore plus petit */
     }
 }
+
+
+/* ============================
+   MENU DE NAVIGATION
+   ============================ */
+
+/* Conteneur principal de la navbar */
+.navbar {
+  background-color: #009639; /* Couleur verte gabonaise */
+  padding: 10px 20px;
+  position: sticky; /* Navbar fixée en haut lors du scroll */
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+}
+
+/* Conteneur interne pour aligner logo et menu */
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Style du logo/titre */
+.nav-logo a {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px;
+}
+
+/* Style du menu principal */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-menu a:hover {
+  background-color: #064;
+  border-radius: 5px;
+}
+
+/* Menu déroulant */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #0f7837;
+  min-width: 180px;
+  flex-direction: column;
+  z-index: 1001;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 15px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #064;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hamburger pour mobile */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none; /* Caché par défaut sur mobile */
+    flex-direction: column;
+    width: 100%;
+    background-color: #009639;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 0;
+  }
+
+  .nav-menu.active {
+    display: flex; /* Affiché quand le menu est activé */
+  }
+
+  .nav-menu a {
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .dropdown-content {
+    position: static; /* Ajustement pour mobile */
+    background-color: #0f7837;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .dropdown-content a {
+    text-align: center;
+  }
+}
+
+/* Animation pour le menu hamburger */
+.nav-menu.active {
+  animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ajustements pour petits écrans */
+@media (max-width: 600px) {
+  .nav-logo a {
+    font-size: 20px;
+  }
+
+  .nav-menu a {
+    font-size: 14px;
+  }
+
+  .dropdown-content {
+    min-width: 100%;
+  }
+}

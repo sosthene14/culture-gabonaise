@@ -3,69 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Culture Gabonaise</title>
-
-  <!-- ✅ On relie le fichier CSS -->
   <link rel="stylesheet" href="spiritualite gabonaise.css">
-
-  <!-- ✅ On importe une police moderne depuis Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <!-- Ajout de Font Awesome pour l'icône du menu hamburger -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-  <!-- ✅ Menu principal de navigation -->
-  <div class="menu">
-  <a href="index.html">Accueil</a>
-  <a href="presentation_gabon.html">GABON</a>
-  <div class="dropdown">
-    <a href="culture.html" class="dropbtn">CULTURE</a>
-    <div class="dropdown-content">
-      <a href="art.html">Art et artisanat</a>
-      <a href="medecine.html">Médecine traditionnelle</a>
-      <a href="gastronomie.html">Gastronomie</a>
-      
+  <!-- Navbar optimisée -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <!-- Logo ou titre (optionnel) -->
+      <div class="nav-logo">
+        <a href="index.html">Culture Gabonaise</a>
+      </div>
+      <!-- Bouton hamburger pour mobile -->
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+      <!-- Menu principal -->
+      <div class="nav-menu">
+        <a href="index.html">Accueil</a>
+        <a href="presentation_gabon.html">Gabon</a>
+        <div class="dropdown">
+          <a href="culture.html" class="dropbtn">Culture</a>
+          <div class="dropdown-content">
+            <a href="art.html">Art et artisanat</a>
+            <a href="medecine.html">Médecine traditionnelle</a>
+            <a href="gastronomie.html">Gastronomie</a>
+          </div>
+        </div>
+        <a href="spiritualite gabonaise.html">Spiritualité</a>
+        <a href="Peuple Fang.html">Peuple Fang</a>
+      </div>
     </div>
+  </nav>
+
+  <!-- Reste de votre HTML inchangé -->
+  <div class="banniere">
+    <img src="images/drapeau5.webp" alt="Bannière Gabon" />
   </div>
-   <a href="spiritualite gabonaise.html">SPIRITUALITÉ</a>
-  <a href="Peuple Fang.html">PEUPLE FANG</a>
-</div>
 
-
-
-  <!-- Bannière en haut de la page -->
-<div class="banniere">
-  <img src="images/drapeau5.webp" alt="Bannière Gabon" />
-</div>
-
-  <!-- ✅ Titre principal de la page -->
   <h1>Bienvenue dans la Culture Gabonaise</h1>
 
-  <!-- ✅ Petit texte d’introduction -->
-   <div style="margin-left: 10px; margin-right: 10px;">
-      <p class="intro">
-    Plongez au cœur de la richesse culturelle du Gabon, un pays d’Afrique centrale aux traditions vivantes et diversifiées.  
-  À travers ce site, vous découvrirez, les peuples, les langues et les coutumes qui façonnent l’identité gabonaise,  
-  notamment celle du peuple Fang. Que vous soyez curieux, étudiant ou passionné de culture africaine, vous êtes au bon endroit.
-</p>
-
-   </div>
-
-  </p>
-
-  <!-- ✅ Section avec des images -->
-  <div class="images">
-    <img src="images/foret-elephants.jpg" alt="foret-elephants">
+  <div style="margin-left: 10px; margin-right: 10px;">
+    <p class="intro">
+      Plongez au cœur de la richesse culturelle du Gabon, un pays d’Afrique centrale aux traditions vivantes et diversifiées.  
+      À travers ce site, vous découvrirez, les peuples, les langues et les coutumes qui façonnent l’identité gabonaise,  
+      notamment celle du peuple Fang. Que vous soyez curieux, étudiant ou passionné de culture africaine, vous êtes au bon endroit.
+    </প>
   </div>
 
-  <!-- ✅ Pied de page -->
-  <footer>
-    <p>© 2025 - Site sur la culture gabonaise
-    </p>
-    <p>
-      BY Chelsie Meye
-    </p>
-  </footer>
+  <div class="images">
+    <img src="images/foret-elephants.jpg" alt="forêt-éléphants">
+  </div>
 
+  <footer>
+    <p>© 2025 - Site sur la culture gabonaise</p>
+    <p>BY Chelsie Meye</p>
+  </footer>
+  <script>
+  // Gestion du menu hamburger
+  document.querySelector('.hamburger').addEventListener('click', () => {
+    document.querySelector('.nav-menu').classList.toggle('active');
+  });
+
+  // Fermer le menu mobile si on clique sur un lien
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelector('.nav-menu').classList.remove('active');
+    });
+  });
+</script>
 </body>
 </html>
